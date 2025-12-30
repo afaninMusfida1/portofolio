@@ -177,7 +177,7 @@ const App = () => {
       <div className="grid grid-cols-1 md:grid-cols-[1fr_2fr] gap-10 mb-[60px] items-start">
         
         {/* ID Card Wrapper */}
-        <div className="relative z-10 md:mx-0 mx-auto max-w-[300px] md:max-w-none">
+        <div className="relative z-10 md:mx-0 mx-auto max-w-[300px] md:max-w-none mt-24 md:mt-0">
          
           <motion.div 
             className="relative z-20 flex flex-col items-center cursor-grab active:cursor-grabbing"
