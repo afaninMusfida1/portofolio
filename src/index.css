@@ -4,7 +4,10 @@
 
 /* Global Styles */
 body {
-  background-color: #000;
+  background-color: #4c35de;
+  /* Pola titik-titik background */
+  background-image: radial-gradient(rgba(255,255,255,0.2) 2px, transparent 2px);
+  background-size: 30px 30px;
   color: white;
   overflow-x: hidden;
 }
