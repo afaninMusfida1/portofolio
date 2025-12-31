@@ -495,7 +495,7 @@ const App = () => {
            <MiniProjectCard 
             title="Photostrip"
             desc="Web kreasi layout foto ala photobooth."
-            lang="HTML"
+            lang="HTML/JS"
             color="bg-pink-300"
             link="https://github.com/afaninMusfida1/Photostrip"
           />
@@ -504,7 +504,7 @@ const App = () => {
           <MiniProjectCard 
             title="Note App"
             desc="Aplikasi catatan digital dengan local storage."
-            lang="JS"
+            lang="HTML/JS"
             color="bg-purple-300"
             link="https://github.com/afaninMusfida1/Note-App"
           />
@@ -513,7 +513,7 @@ const App = () => {
           <MiniProjectCard 
             title="Konversi Bilangan"
             desc="Tools konversi Desimal, Biner, Oktal, Hex."
-            lang="JS"
+            lang="HTML/JS"
             color="bg-red-300"
             link="https://github.com/afaninMusfida1/convert-bilangan"
           />
@@ -522,7 +522,7 @@ const App = () => {
            <MiniProjectCard 
             title="Tour & Travel"
             desc="Website profil untuk agen travel."
-            lang="HTML"
+            lang="PHP"
             color="bg-orange-300"
             link="https://github.com/afaninMusfida1/tour"
           />
