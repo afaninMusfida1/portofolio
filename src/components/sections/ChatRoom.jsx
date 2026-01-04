@@ -118,7 +118,7 @@ const ChatRoom = () => {
       <div className="bg-[#31a8ff] p-3 border-b-[3px] border-black flex justify-between items-center z-10 relative">
         <div className="flex items-center gap-2">
            <div className="w-3 h-3 rounded-full bg-black"></div>
-           <h3 className="font-fredoka font-bold text-white text-lg tracking-wide">GLOBAL CHAT</h3>
+           <h3 className="font-fredoka font-bold text-white text-lg tracking-wide">SAY HI!!</h3>
         </div>
         {user && (
             <button onClick={handleLogout} className="bg-black text-white text-xs px-2 py-1 rounded border border-white hover:bg-red-500 transition-colors cursor-pointer">
