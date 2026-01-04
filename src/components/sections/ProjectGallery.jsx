@@ -41,7 +41,7 @@ const ProjectGallery = () => {
                     color="bg-[#33cc33] text-white"
                     rotation="-rotate-1"
                     repoLink="https://github.com/afaninMusfida1/AIPRA"
-                    demoLink="#" 
+                    demoLink="https://aipra-4bm9.vercel.app/" 
                 />
                 <ProjectCard 
                     title="Sistem Surat"
