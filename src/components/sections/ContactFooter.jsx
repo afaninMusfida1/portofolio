@@ -73,7 +73,7 @@ const ContactFooter = () => {
             </div>
             <div>
                 <p className="font-fredoka font-bold mb-3 text-sm uppercase tracking-wide opacity-80 flex items-center gap-2">
-                    Let's Mutual! ✨
+                    Let's Mutual! 
                 </p>
                 <div className="grid grid-cols-2 gap-3">
                     {socials.map((item) => (
@@ -97,7 +97,7 @@ const ContactFooter = () => {
           {/* KANAN - Form Baru */}
           <div className="bg-white border-[3px] border-black rounded-[15px] p-6 shadow-[8px_8px_0_rgba(0,0,0,0.1)] relative">
             <h3 className="font-fredoka font-bold text-2xl mb-4 border-b-2 border-dashed border-black pb-2">
-                Kirim Pesan Rahasia 🤫
+                Kirim Pesan Rahasia ke Gue!
             </h3>
 
             <AnimatePresence mode='wait'>
