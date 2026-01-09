@@ -6,6 +6,7 @@ import AboutSection from './components/sections/AboutSection';
 import ChatRoom from './components/sections/ChatRoom';
 import ProjectGallery from './components/sections/ProjectGallery';
 import ResumeClipboard from './components/sections/ResumeClipboard';
+import ContactFooter from './components/sections/ContactFooter';
 import { bouncyTransition } from './utils/animations';
 
 const App = () => {
@@ -45,6 +46,8 @@ const App = () => {
 
             {/* --- CLIPBOARD / RESUME SECTION --- */}
             <ResumeClipboard />
+
+            <ContactFooter />
 
         </div>
     </GoogleOAuthProvider>

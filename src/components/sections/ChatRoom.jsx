@@ -16,7 +16,8 @@ import {
 } from "firebase/firestore";
 
 const ChatRoom = () => {
-  const dummyDiv = useRef(null);
+  // UBAH 1: Ganti dummyDiv jadi ref untuk container chat agar scrollnya spesifik di box ini aja
+  const chatContainerRef = useRef(null);
 
   // --- USER STATE (Tetap pakai localStorage biar user ga logout pas refresh) ---
   const [user, setUser] = useState(() => {
@@ -47,9 +48,12 @@ const ChatRoom = () => {
       });
       setMessages(pushedMessages);
       
-      // Auto scroll ke paling bawah setiap ada pesan baru
+      // UBAH 2: Logic scroll aman (tidak menarik halaman ke bawah)
       setTimeout(() => {
-        dummyDiv.current?.scrollIntoView({ behavior: 'smooth' });
+        if (chatContainerRef.current) {
+          // Set scrollbar container ke paling bawah
+          chatContainerRef.current.scrollTop = chatContainerRef.current.scrollHeight;
+        }
       }, 100);
     });
 
@@ -128,7 +132,11 @@ const ChatRoom = () => {
       </div>
 
       {/* Chat Area */}
-      <div className="flex-1 p-4 overflow-y-auto bg-gray-50 flex flex-col gap-4 font-patrick">
+      {/* UBAH 3: Pasang ref disini (chatContainerRef) */}
+      <div 
+        ref={chatContainerRef}
+        className="flex-1 p-4 overflow-y-auto bg-gray-50 flex flex-col gap-4 font-patrick"
+      >
         {messages.length === 0 && (
             <div className="h-full flex flex-col items-center justify-center text-gray-400 opacity-50">
                 <span className="text-4xl mb-2">🔥</span>
@@ -167,7 +175,7 @@ const ChatRoom = () => {
                 </div>
             )
         })}
-        <div ref={dummyDiv}></div>
+        {/* UBAH 4: Hapus <div ref={dummyDiv}></div> karena sudah tidak dipakai */}
       </div>
 
       {/* Footer / Input */}
@@ -203,4 +211,5 @@ const ChatRoom = () => {
     </motion.div>
   );
 };
+
 export default ChatRoom;

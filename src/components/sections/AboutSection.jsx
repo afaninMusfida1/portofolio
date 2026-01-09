@@ -66,7 +66,7 @@ const AboutSection = () => {
             </p>
 
             <motion.a 
-                href="#"
+                href="#contact"
                 className="inline-block bg-ink-black text-neon-green px-[35px] py-[15px] font-fredoka text-[1.5rem] mt-[30px] -rotate-2 shadow-[5px_5px_0_rgba(255,255,255,0.5)] border-2 border-white rounded-[10px] no-underline"
                 whileHover={{ 
                     rotate: 0, 
