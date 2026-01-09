@@ -7,7 +7,7 @@ const ContactFooter = () => {
   const [formData, setFormData] = useState({ name: '', email: '', message: '' });
   const [status, setStatus] = useState('idle'); 
 
-  const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbwFx5sGr3zpbkbhrn9ZOtvF0XG0AbaJb23IbXjq22gNzZlIV2wsjW3CEr3K90QBU70W/exec"; 
+  const SCRIPT_URL = import.meta.env.VITE_GOOGLE_SCRIPT_URL; 
 
   const socials = [
     { id: 1, name: "GitHub", icon: <Github size={20} />, url: "https://github.com/AfaninMusfida1", color: "bg-[#333] text-white", hover: "hover:bg-[#000]" },
@@ -25,6 +25,10 @@ const ContactFooter = () => {
     setStatus('submitting');
 
     try {
+        if (!SCRIPT_URL) {
+            throw new Error("URL Script belum disetting di .env");
+        }
+
         await fetch(SCRIPT_URL, {
             method: 'POST',
             body: JSON.stringify(formData),
@@ -57,6 +61,7 @@ const ContactFooter = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10 relative z-10">
           
+          {/* Kolom Kiri */}
           <div className="flex flex-col justify-between">
             <div>
                 <h2 className="font-fredoka font-black text-4xl md:text-5xl text-black leading-tight mb-4">
@@ -89,6 +94,7 @@ const ContactFooter = () => {
             </div>
           </div>
 
+          {/* Kolom Kanan (Form) */}
           <div className="bg-white border-[3px] border-black rounded-[15px] p-6 shadow-[8px_8px_0_rgba(0,0,0,0.1)] relative">
             <h3 className="font-fredoka font-bold text-2xl mb-4 border-b-2 border-dashed border-black pb-2">
                 Kirim Pesan Rahasia ke Gue!
