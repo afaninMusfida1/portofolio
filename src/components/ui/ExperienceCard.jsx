@@ -13,7 +13,6 @@ const ExperienceCard = ({ title, year, desc, bgClass, rotateClass }) => (
       borderColor: "#4c35de",
       zIndex: 5
     }}
-    // FIX HP: Efek tekan (scale down sedikit)
     whileTap={{ scale: 0.98, rotate: 0, boxShadow: "2px 2px 0 black" }}
     transition={bouncyTransition}
   >

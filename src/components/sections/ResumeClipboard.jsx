@@ -18,16 +18,14 @@ const ResumeClipboard = () => {
         <motion.div
             className="bg-[#222] rounded-[20px] p-[15px] pt-[60px] shadow-hard border-[3px] border-ink-black relative"
             whileHover={{ y: -5, boxShadow: "10px 10px 0 black" }}
-            whileTap={{ scale: 0.99 }} // Efek tekan container
+            whileTap={{ scale: 0.99 }} 
             transition={bouncyTransition}
         >
             <div className="bg-paper-white min-h-[500px] rounded-[10px] p-[40px] grid grid-cols-1 md:grid-cols-2 gap-[50px] border-2 border-black">
-                {/* Left Column */}
                 <section>
                     <motion.div 
                         className="inline-block px-[25px] py-[8px] font-fredoka font-semibold uppercase text-[1.4rem] mb-[25px] border-2 border-black shadow-[4px_4px_0_black] cursor-default bg-neon-green -rotate-2"
                         whileHover={wiggleHover}
-                        // FIX HP:
                         whileTap={{ scale: 0.95, rotate: 2 }}
                     >
                         Education
@@ -51,7 +49,6 @@ const ResumeClipboard = () => {
                         <motion.div 
                             className="inline-block px-[25px] py-[8px] font-fredoka font-semibold uppercase text-[1.4rem] mb-[25px] border-2 border-black shadow-[4px_4px_0_black] cursor-default bg-[#ff922b] text-white rotate-1"
                             whileHover={wiggleHover}
-                            // FIX HP:
                             whileTap={{ scale: 0.95, rotate: -2 }}
                         >
                             Skill
@@ -66,12 +63,10 @@ const ResumeClipboard = () => {
                     </div>
                 </section>
 
-                {/* Right Column */}
                 <section>
                     <motion.div 
                         className="inline-block px-[25px] py-[8px] font-fredoka font-semibold uppercase text-[1.4rem] mb-[25px] border-2 border-black shadow-[4px_4px_0_black] cursor-default bg-electric-purple text-white rotate-2"
                         whileHover={wiggleHover}
-                        // FIX HP:
                         whileTap={{ scale: 0.95, rotate: -2 }}
                     >
                         Experience

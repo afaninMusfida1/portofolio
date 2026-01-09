@@ -16,10 +16,8 @@ import {
 } from "firebase/firestore";
 
 const ChatRoom = () => {
-  // UBAH 1: Ganti dummyDiv jadi ref untuk container chat agar scrollnya spesifik di box ini aja
   const chatContainerRef = useRef(null);
 
-  // --- USER STATE (Tetap pakai localStorage biar user ga logout pas refresh) ---
   const [user, setUser] = useState(() => {
     if (typeof window !== 'undefined') {
       const savedUser = localStorage.getItem('chatUser');
@@ -31,16 +29,13 @@ const ChatRoom = () => {
   const [messages, setMessages] = useState([]);
   const [newMessage, setNewMessage] = useState("");
 
-  // --- 1. MAGIC FIREBASE: DENGARKAN PESAN MASUK (REALTIME) ---
   useEffect(() => {
-    // Query: Ambil dari koleksi 'messages', urutkan berdasarkan waktu buat
     const q = query(
       collection(db, "messages"),
       orderBy("createdAt", "asc"),
-      limit(100) // Batasi 100 pesan terakhir biar ga berat
+      limit(100) 
     );
 
-    // onSnapshot: Ini yang bikin chat muncul sendiri tanpa refresh
     const unsubscribe = onSnapshot(q, (querySnapshot) => {
       const pushedMessages = [];
       querySnapshot.forEach((doc) => {
@@ -48,19 +43,16 @@ const ChatRoom = () => {
       });
       setMessages(pushedMessages);
       
-      // UBAH 2: Logic scroll aman (tidak menarik halaman ke bawah)
       setTimeout(() => {
         if (chatContainerRef.current) {
-          // Set scrollbar container ke paling bawah
           chatContainerRef.current.scrollTop = chatContainerRef.current.scrollHeight;
         }
       }, 100);
     });
 
-    return () => unsubscribe(); // Matikan pendengar kalau pindah halaman
+    return () => unsubscribe(); 
   }, []);
 
-  // Simpan session user
   useEffect(() => {
     if (user) {
       localStorage.setItem('chatUser', JSON.stringify(user));
@@ -69,7 +61,6 @@ const ChatRoom = () => {
     }
   }, [user]);
 
-  // --- GOOGLE LOGIN ---
   const login = useGoogleLogin({
     onSuccess: async (tokenResponse) => {
       try {
@@ -89,22 +80,20 @@ const ChatRoom = () => {
     setUser(null);
   };
 
-  // --- KIRIM PESAN KE FIREBASE ---
   const handleSendMessage = async (e) => {
     e.preventDefault();
     if (!newMessage.trim() || !user) return;
 
     try {
-      // Kirim data ke database "cloud"
       await addDoc(collection(db, "messages"), {
         text: newMessage,
         uid: user.sub,
         photoURL: user.picture,
         displayName: user.name,
-        createdAt: serverTimestamp() // Pakai jam server Google biar sinkron
+        createdAt: serverTimestamp() 
       });
 
-      setNewMessage(""); // Kosongkan input
+      setNewMessage(""); 
     } catch (error) {
       console.error("Error sending message: ", error);
       alert("Gagal kirim pesan. Cek koneksi internetmu.");
@@ -132,7 +121,6 @@ const ChatRoom = () => {
       </div>
 
       {/* Chat Area */}
-      {/* UBAH 3: Pasang ref disini (chatContainerRef) */}
       <div 
         ref={chatContainerRef}
         className="flex-1 p-4 overflow-y-auto bg-gray-50 flex flex-col gap-4 font-patrick"
@@ -140,7 +128,7 @@ const ChatRoom = () => {
         {messages.length === 0 && (
             <div className="h-full flex flex-col items-center justify-center text-gray-400 opacity-50">
                 <span className="text-4xl mb-2">🔥</span>
-                <p className="font-fredoka text-lg">Chatroom Online!</p>
+                <p className="font-fredoka text-lg">Chatroom!</p>
                 <p className="text-sm">Jadilah yang pertama chat disini.</p>
             </div>
         )}
@@ -175,10 +163,9 @@ const ChatRoom = () => {
                 </div>
             )
         })}
-        {/* UBAH 4: Hapus <div ref={dummyDiv}></div> karena sudah tidak dipakai */}
       </div>
 
-      {/* Footer / Input */}
+      {/* Footer */}
       <div className="p-3 bg-[#eee] border-t-[3px] border-black relative z-20">
         {!user ? (
             <div className="flex flex-col items-center gap-2">

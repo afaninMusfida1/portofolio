@@ -13,7 +13,6 @@ const AboutSection = () => {
             boxShadow: "15px 15px 0px #1a1a1a",
             zIndex: 8
         }}
-        // FIX HP:
         whileTap={{ scale: 0.98, rotate: 1 }}
         transition={bouncyTransition}
     >
@@ -26,13 +25,12 @@ const AboutSection = () => {
                 color: "#1a1a1a",
                 boxShadow: "4px 4px 0 black"
             }}
-            // FIX HP:
             whileTap={{ scale: 0.9, rotate: -10 }}
         >
             HI! 👋
         </motion.div>
 
-        {/* Skill Stickers (Sama seperti sebelumnya) */}
+        {/* Skill Stickers */}
         <div className="absolute -right-[95px] top-[80px] hidden md:flex flex-col gap-[15px] mb">
             <CustomSkillSticker 
                 text={<div className="flex items-center gap-2"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" className="w-5 h-5" alt="React" /><span>React</span></div>} 
@@ -76,7 +74,6 @@ const AboutSection = () => {
                     borderColor: "black", 
                     boxShadow: "8px 8px 0 black" 
                 }}
-                // FIX HP:
                 whileTap={{ scale: 0.95, rotate: -2 }}
                 transition={bouncyTransition}
             >

@@ -15,7 +15,7 @@ const ProfileSidebar = () => {
             whileHover={{ scale: 1.02 }}
             whileTap={{ scale: 1.05 }}
         >
-            {/* Tali ID Card (Sama) */}
+            {/* Tali ID Card */}
             <div className="absolute -top-[120px] left-1/2 -translate-x-1/2 w-[20px] h-[150px] bg-ink-black border-l-2 border-r-2 border-dashed border-[#555] -z-10"></div>
 
             {/* Jepitan ID Card */}
@@ -33,11 +33,11 @@ const ProfileSidebar = () => {
                 </motion.div>
             </div>
 
-            {/* Kartu Fisik (Sama) */}
+            {/* Kartu Fisik */}
             <div className="bg-paper-white p-5 pb-10 rounded-[20px] border-[3px] border-ink-black shadow-hard -rotate-3 text-center w-full relative z-10 mt-2">
                 <div className="w-full aspect-[3/4] bg-neon-green rounded-[12px] overflow-hidden mb-[15px] border-[3px] border-ink-black relative group mt-4">
                     <img 
-                        src="/assets/Afanin.png" 
+                        src="https://res.cloudinary.com/dfwe8am51/image/upload/v1767967813/Afanin_brbmiq.png" 
                         alt="Profile" 
                         className="w-full h-full object-cover grayscale sepia-[0.2] transition-all duration-500 group-hover:grayscale-0 group-hover:sepia-0 group-hover:scale-110 group-hover:rotate-2"
                     />
@@ -51,7 +51,6 @@ const ProfileSidebar = () => {
         <motion.div
             className="bg-neon-green p-[25px] font-patrick text-[1.2rem] border-[3px] border-ink-black shadow-hard rotate-3 mt-[40px] relative z-10 w-[110%] -ml-[5%] text-black md:max-w-none max-w-[320px] md:mx-0 mx-auto md:-ml-[5%]"
             whileHover={{ rotate: 5, y: -5 }}
-            // FIX HP:
             whileTap={{ rotate: 0, scale: 0.98 }}
             transition={bouncyTransition}
         >

@@ -8,15 +8,12 @@ const MiniProjectCard = ({ title, desc, lang, color, repoLink, demoLink }) => {
     <motion.div
       className="flex flex-col h-full p-5 border-[3px] border-black rounded-[10px] shadow-[4px_4px_0_black] bg-white relative overflow-hidden group text-black cursor-default"
       whileHover={{ y: -5, boxShadow: "8px 8px 0 black" }}
-      // Efek tekan pada kartu (hanya visual)
       whileTap={{ scale: 0.99, boxShadow: "2px 2px 0 black", y: 0 }}
       transition={bouncyTransition}
     >
-      {/* Dekorasi Bulatan di Pojok */}
       <div className={`absolute -right-4 -top-4 w-12 h-12 rounded-full border-2 border-black ${color}`}></div>
       
       <div className="relative z-10 flex flex-col flex-1">
-        {/* Header */}
         <div className="flex justify-between items-start mb-2">
           <h4 className="font-fredoka font-bold text-lg leading-tight pr-2">{title}</h4>
           <span className="text-[10px] font-bold border border-black px-1.5 py-0.5 rounded-md bg-gray-100 whitespace-nowrap">

@@ -12,7 +12,6 @@ const ProjectCard = ({ title, desc, tags, color, rotation, repoLink, demoLink })
       rotate: 0,
       scale: 1.02
     }}
-    // FIX HP: Feedback sentuhan
     whileTap={{ scale: 0.98, rotate: 0, y: 0, boxShadow: "4px 4px 0 black" }}
     transition={bouncyTransition}
   >
@@ -39,7 +38,6 @@ const ProjectCard = ({ title, desc, tags, color, rotation, repoLink, demoLink })
       </div>
 
       <div className="flex gap-3">
-        {/* LOGIKA BARU: Cek jika ada link DAN link bukan '#' */}
         
         {repoLink && repoLink !== '#' && (
             <a href={repoLink} target="_blank" rel="noreferrer" className="flex-1">

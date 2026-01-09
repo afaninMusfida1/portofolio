@@ -13,7 +13,6 @@ const FooterIcon = ({ icon: Icon, bg }) => (
       color: "white",
       borderColor: "white"
     }}
-    // FIX HP: Efek membal saat ditekan
     whileTap={{ scale: 0.9 }}
     transition={{ type: "spring", stiffness: 300, damping: 15 }}
   >

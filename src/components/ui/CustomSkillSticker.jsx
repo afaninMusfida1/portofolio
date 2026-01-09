@@ -11,7 +11,6 @@ const CustomSkillSticker = ({ text, style, rotate }) => (
       rotate: [0, 5, -5, 3, 0],
       transition: { duration: 0.4 }
     }}
-    // FIX HP: Animasi goyang saat disentuh
     whileTap={{
       scale: 0.9,
       rotate: [0, 5, -5, 3, 0], 

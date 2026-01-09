@@ -103,7 +103,6 @@ const ProjectGallery = () => {
                     target="_blank"
                     className="flex flex-col items-center justify-center p-5 border-[3px] border-dashed border-white rounded-[10px] text-white hover:border-black hover:text-black hover:bg-gray-50 transition-all cursor-pointer"
                     whileHover={{ scale: 0.98 }}
-                    // FIX HP: Tambah efek tap
                     whileTap={{ scale: 0.95 }}
                 >
                     <span className="font-fredoka font-bold text-lg">View All Repos</span>
