@@ -88,7 +88,7 @@ const ContactFooter = () => {
                 </div>
             </div>
           </div>
-\
+
           <div className="bg-white border-[3px] border-black rounded-[15px] p-6 shadow-[8px_8px_0_rgba(0,0,0,0.1)] relative">
             <h3 className="font-fredoka font-bold text-2xl mb-4 border-b-2 border-dashed border-black pb-2">
                 Kirim Pesan Rahasia ke Gue!
