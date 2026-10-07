@@ -29,7 +29,6 @@ const ProjectGallery = () => {
                     rotation="rotate-1"
                     repoLink="#"
                     demoLink="https://napak.web.id/"
-                    image="/assets/projects/napak.png"
                 />
                 <ProjectCard
                     label="WEB"
