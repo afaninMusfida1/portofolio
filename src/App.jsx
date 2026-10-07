@@ -8,13 +8,15 @@ import ProjectGallery from './components/sections/ProjectGallery';
 import ResumeClipboard from './components/sections/ResumeClipboard';
 import ContactFooter from './components/sections/ContactFooter';
 import { bouncyTransition } from './utils/animations';
+import NavBar from './components/sections/Navbar';
 
 const App = () => {
-  const GOOGLE_CLIENT_ID = import.meta.env.VITE_GOOGLE_CLIENT_ID;
+  const GOOGLE_CLIENT_ID = import.meta.env.VITE_GOOGLE_CLIENT_ID || "missing-client-id";
 
   return (
     <GoogleOAuthProvider clientId={GOOGLE_CLIENT_ID}>
-        <div className="container mx-auto max-w-[1000px] pt-[50px] px-5 relative pb-10 font-poppins text-ink-black">
+        <div className="container mx-auto max-w-[1000px] pt-[70px] px-5 relative pb-10 font-poppins text-ink-black">
+            <NavBar />
 
             {/* --- HEADER STICKER --- */}
             <motion.div

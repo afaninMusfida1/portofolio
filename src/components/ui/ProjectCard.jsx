@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import { Github, ExternalLink } from 'lucide-react';
 import { bouncyTransition } from '../../utils/animations';
 
-const ProjectCard = ({ title, desc, tags, color, rotation, repoLink, demoLink }) => (
+const ProjectCard = ({ title, desc, tags, color, rotation, repoLink, demoLink, label = "PROJECT" }) => (
   <motion.div
     className={`relative bg-white border-[3px] border-black rounded-[15px] p-0 overflow-hidden shadow-[8px_8px_0_black] ${rotation}`}
     whileHover={{ 

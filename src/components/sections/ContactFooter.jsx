@@ -51,7 +51,7 @@ const ContactFooter = () => {
   };
 
   return (
-    <div id="contact" className="mt-[80px] mb-10">
+    <div id="contact" className="mt-[80px] mb-10 scroll-mt-24">
       <motion.div 
         className="bg-[#FFD600] border-[3px] border-black rounded-[20px] p-6 md:p-10 relative shadow-[10px_10px_0_black] overflow-hidden"
         whileHover={{ scale: 1.005, boxShadow: "14px 14px 0 black" }}
