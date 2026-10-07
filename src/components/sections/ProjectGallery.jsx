@@ -29,6 +29,7 @@ const ProjectGallery = () => {
                     rotation="rotate-1"
                     repoLink="#"
                     demoLink="https://napak.web.id/"
+                    image="/assets/projects/napak.png"
                 />
                 <ProjectCard
                     label="WEB"
@@ -125,7 +126,8 @@ const ProjectGallery = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 px-4 md:px-0">
                 <ProjectCard
                     label="AR"
-                    title="E-Lens"
+                    title="E-Lens"         
+                    image="/assets/projects/elens.png"
                     desc="Pengenalan budaya rumah adat lewat AR. Scan card bergambar orang berpakaian adat, lalu rumah adatnya muncul."
                     tags={["AR", "Edukasi Budaya"]}
                     color="bg-amber-300"
@@ -135,7 +137,8 @@ const ProjectGallery = () => {
                 />
                 <ProjectCard
                     label="VR"
-                    title="Ward 13"
+                    title="Ward 13"         
+                    image="/assets/projects/ward13.png"
                     desc="Horror walking simulator 3D di browser dengan movement engine custom, tekstur prosedural, dan sound Web Audio API."
                     tags={["A-Frame", "Web Audio API"]}
                     color="bg-red-400 text-white"
@@ -145,13 +148,36 @@ const ProjectGallery = () => {
                 />
                 <ProjectCard
                     label="VR"
-                    title="Simulasi NAPAK"
+                    title="Simulasi NAPAK"                    
+                    image="/assets/projects/napak.png"
                     desc="Simulasi 3D interaktif longsor pada NAPAK, dengan kontrol WASD dan kontrol VR untuk mobile."
                     tags={["Three.js", "React Three Fiber"]}
                     color="bg-orange-300"
                     rotation="rotate-1"
                     repoLink="#"
                     demoLink="https://napak.web.id/"
+                />
+                <ProjectCard
+                    label="AR/VR"
+                    title="Tata Surya XR"
+                    image="/assets/projects/tatasurya.png"
+                    desc="Simulasi tata surya 3D interaktif. Klik planet untuk info, jelajahi dengan WASD + mouse, atau masuk lewat mode VR/AR."
+                    tags={["WebXR", "3D", "Edukasi"]}
+                    color="bg-indigo-300"
+                    rotation="-rotate-1"
+                    repoLink="#"
+                    demoLink="https://tatasurya-xi.vercel.app/"
+                />
+                <ProjectCard
+                    label="AR.VR"
+                    title="Anatomi 3D Interaktif"
+                    image="/assets/projects/anatomi.png"
+                    desc="Model anatomi tubuh manusia 3D dengan label organ, isolasi organ, putar otomatis, dan zoom. Model: HuBMAP (CC BY 4.0)."
+                    tags={["3D", "Edukasi", "Interaktif"]}
+                    color="bg-rose-300"
+                    rotation="rotate-1"
+                    repoLink="#"
+                    demoLink="https://anatomi-one.vercel.app/"
                 />
             </div>
         </div>
