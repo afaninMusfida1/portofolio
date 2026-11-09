@@ -1,7 +1,7 @@
 import React from 'react';
 import { GoogleOAuthProvider } from '@react-oauth/google';
 import NavBar from './components/sections/Navbar';
-import Scene3D from './components/sections/Scene3d';
+import Scene3D from './components/sections/Scene3D';
 import ChatDock from './components/sections/ChatDock';
 
 // benerin
