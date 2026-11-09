@@ -4,10 +4,10 @@ import { Github, Linkedin, Instagram, Mail, Send, Loader2, CheckCircle2 } from '
 import { bouncyTransition } from '../../utils/animations';
 
 const ContactFooter = () => {
-  const [formData, setFormData] = useState({ name: '', email: '', message: '' });
+  const [formData, setFormData] = useState({ name: '', email: '', message: '', website: '' });
   const [status, setStatus] = useState('idle'); 
 
-  const SCRIPT_URL = import.meta.env.VITE_GOOGLE_SCRIPT_URL; 
+  const ENDPOINT = import.meta.env.VITE_CONTACT_ENDPOINT || '/api/contact'; 
 
   const socials = [
     { id: 1, name: "GitHub", icon: <Github size={20} />, url: "https://github.com/AfaninMusfida1", color: "bg-[#333] text-white", hover: "hover:bg-[#000]" },
@@ -25,21 +25,15 @@ const ContactFooter = () => {
     setStatus('submitting');
 
     try {
-        if (!SCRIPT_URL) {
-            throw new Error("URL Script belum disetting di .env");
-        }
-
-        await fetch(SCRIPT_URL, {
+        const res = await fetch(ENDPOINT, {
             method: 'POST',
-            body: JSON.stringify(formData),
-            mode: 'no-cors', 
-            headers: {
-                'Content-Type': 'application/json'
-            }
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(formData)
         });
+        if (!res.ok) throw new Error(`Gagal kirim (${res.status})`);
 
         setStatus('success');
-        setFormData({ name: '', email: '', message: '' });
+        setFormData({ name: '', email: '', message: '', website: '' });
         
         setTimeout(() => setStatus('idle'), 3000);
 
@@ -51,7 +45,7 @@ const ContactFooter = () => {
   };
 
   return (
-    <div id="contact" className="mt-[80px] mb-10 scroll-mt-24">
+    <div id="contact-form" className="mt-[80px] mb-10 scroll-mt-24">
       <motion.div 
         className="bg-[#FFD600] border-[3px] border-black rounded-[20px] p-6 md:p-10 relative shadow-[10px_10px_0_black] overflow-hidden"
         whileHover={{ scale: 1.005, boxShadow: "14px 14px 0 black" }}
@@ -124,6 +118,8 @@ const ContactFooter = () => {
                         onSubmit={handleSubmit} 
                         className="flex flex-col gap-4"
                     >
+                        {/* Honeypot anti-bot */}
+                        <input type="text" name="website" value={formData.website} onChange={handleChange} tabIndex={-1} autoComplete="off" aria-hidden="true" className="absolute left-[-9999px] h-0 w-0 opacity-0" />
                         {/* Input Nama */}
                         <div>
                             <label className="font-fredoka text-sm font-bold mb-1 block ml-1">Nama Lo</label>

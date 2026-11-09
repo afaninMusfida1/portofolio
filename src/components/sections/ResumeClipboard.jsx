@@ -9,7 +9,7 @@ import { bouncyTransition, wiggleHover } from '../../utils/animations';
 
 const ResumeClipboard = () => {
   return (
-    <div id="resume" className="mt-[60px] relative group/clipboard scroll-mt-24">
+    <div id="resume-list" className="mt-[60px] relative group/clipboard scroll-mt-24">
         {/* Metal Clip */}
         <div className="absolute -top-[25px] left-1/2 -translate-x-1/2 w-[160px] h-[60px] bg-white rounded-[10px] z-30 border-[3px] border-ink-black shadow-[4px_4px_0_black] flex justify-center items-center transition-all duration-400 ease-[cubic-bezier(0.34,1.56,0.64,1)] group-hover/clipboard:-translate-y-[5px] group-hover/clipboard:-rotate-1">
             <div className="w-[80%] h-[15px] bg-[#ccc] border-2 border-ink-black rounded-[20px]"></div>

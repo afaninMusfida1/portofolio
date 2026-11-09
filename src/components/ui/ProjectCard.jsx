@@ -4,13 +4,13 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { Github, ExternalLink, ImageOff, X, ZoomIn } from 'lucide-react';
 import { bouncyTransition } from '../../utils/animations';
 
-const ProjectCard = ({ title, desc, tags, color, rotation, repoLink, demoLink, label = "PROJECT", image }) => {
+const ProjectCard = ({ title, desc, tags, color, rotation, repoLink, demoLink, label = "PROJECT", image, featured = false }) => {
   const [zoom, setZoom] = useState(false);
   const [failed, setFailed] = useState(false);
 
   return (
     <motion.div
-      className={`relative bg-white border-[3px] border-black rounded-[15px] p-0 overflow-hidden shadow-[8px_8px_0_black] ${rotation}`}
+      className={`relative bg-white border-[3px] border-black rounded-[15px] p-0 overflow-hidden shadow-[8px_8px_0_black] ${rotation} ${featured ? 'md:col-span-2' : ''}`}
       whileHover={{ 
         y: -10, 
         boxShadow: "12px 12px 0 black", 
@@ -26,6 +26,7 @@ const ProjectCard = ({ title, desc, tags, color, rotation, repoLink, demoLink, l
         <div className="w-3 h-3 rounded-full bg-[#27c93f] border border-white/20"></div>
       </div>
 
+      <div className={featured ? 'md:flex' : ''}>
       {/* Preview Image */}
       {image && (
         failed ? (
@@ -37,7 +38,7 @@ const ProjectCard = ({ title, desc, tags, color, rotation, repoLink, demoLink, l
           <button
             type="button"
             onClick={() => setZoom(true)}
-            className="group/preview relative block w-full aspect-video bg-gray-100 border-b-[3px] border-black overflow-hidden cursor-zoom-in"
+            className={`group/preview relative block w-full aspect-video bg-gray-100 border-b-[3px] border-black overflow-hidden cursor-zoom-in ${featured ? 'md:w-1/2 md:aspect-auto md:min-h-[300px] md:border-b-0 md:border-r-[3px]' : ''}`}
           >
             <img
               src={image}
@@ -53,7 +54,7 @@ const ProjectCard = ({ title, desc, tags, color, rotation, repoLink, demoLink, l
         )
       )}
 
-      <div className="p-6">
+      <div className={`p-6 ${featured ? 'md:flex-1 md:flex md:flex-col md:justify-center md:p-8' : ''}`}>
         <div className={`inline-block px-3 py-1 rounded-md border-2 border-black font-bold text-xs mb-3 shadow-[2px_2px_0_black] ${color}`}>
           {label}
         </div>
@@ -87,6 +88,7 @@ const ProjectCard = ({ title, desc, tags, color, rotation, repoLink, demoLink, l
               </a>
           )}
         </div>
+      </div>
       </div>
 
       {/* Lightbox (portal supaya tidak ikut rotate/transform card) */}

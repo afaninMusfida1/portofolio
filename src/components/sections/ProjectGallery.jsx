@@ -2,6 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import ProjectCard from '../ui/ProjectCard';
 import MiniProjectCard from '../ui/MiniProjectCard';
+import SceneBand from './SceneBand';
 
 const SectionTitle = ({ children }) => (
   <div className="flex items-center gap-4 mb-6 px-4 md:px-0">
@@ -17,12 +18,15 @@ const ProjectGallery = () => {
   return (
     <>
         {/* ===================== WEB ===================== */}
-        <div id="web" className="mb-[80px] scroll-mt-24">
+        <SceneBand id="web" tag="WEB" h1="Proyek Web," h2="Dari Web-GIS ke Arsip." p="NAPAK, Reksa, AIPRA, dan proyek web lainnya." />
+        <div id="web-list" className="panel mb-[80px] scroll-mt-24">
         <SectionTitle>Web Projects</SectionTitle>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 px-4 md:px-0">
                 <ProjectCard
                     label="WEB"
                     title="NAPAK"
+                    featured
+                    image="/assets/projects/napak.png"
                     desc="Platform Web-GIS dan simulasi 3D untuk mitigasi longsor di Semarang."
                     tags={["Next.js", "TypeScript", "Three.js", "PostgreSQL"]}
                     color="bg-orange-300"
@@ -93,7 +97,8 @@ const ProjectGallery = () => {
         </div>
 
         {/* ===================== APP ===================== */}
-        <div id="app" className="mb-[80px] scroll-mt-24">
+        <SceneBand id="app" tag="MOBILE" h1="Aplikasi Mobile," h2="Antrean sampai IoT." p="KliQ dan Gluver, dari rancangan UI/UX sampai perangkat ESP32." />
+        <div id="app-list" className="panel mb-[80px] scroll-mt-24">
             <SectionTitle>Mobile Apps</SectionTitle>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 px-4 md:px-0">
                 <ProjectCard
@@ -120,12 +125,14 @@ const ProjectGallery = () => {
         </div>
 
         {/* ===================== AR / VR ===================== */}
-        <div id="arvr" className="mb-[80px] scroll-mt-24">
+        <SceneBand id="arvr" tag="AR / VR" h1="Dunia 3D di Browser," h2="AR dan VR." p="Simulasi interaktif yang bisa dijelajahi dengan WASD, mouse, atau headset." />
+        <div id="arvr-list" className="panel mb-[80px] scroll-mt-24">
             <SectionTitle>AR / VR</SectionTitle>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 px-4 md:px-0">
                 <ProjectCard
                     label="AR"
-                    title="E-Lens"         
+                    title="E-Lens"
+                    featured         
                     image="/assets/projects/elens.png"
                     desc="Pengenalan budaya rumah adat lewat AR. Scan card bergambar orang berpakaian adat, lalu rumah adatnya muncul."
                     tags={["AR", "Edukasi Budaya"]}
@@ -182,7 +189,7 @@ const ProjectGallery = () => {
         </div>
 
         {/* ===================== WEB — MINI ===================== */}
-        <div className="mb-[80px]">
+        <div className="panel mb-[80px]">
             <SectionTitle>More Experiments</SectionTitle>
 
             <div className="grid grid-cols-2 md:grid-cols-3 gap-4 px-4 md:px-0">

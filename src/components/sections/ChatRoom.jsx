@@ -15,6 +15,26 @@ import {
   serverTimestamp 
 } from "firebase/firestore";
 
+const AVATAR_BG = ['#ff99cc', '#31a8ff', '#ff922b', '#33cc33', '#9a8cf2', '#ffd23f'];
+
+/* Foto profil Google; jika gagal dimuat, tampilkan inisial berwarna (bukan avatar acak) */
+const Avatar = ({ src, name }) => {
+  const [failed, setFailed] = useState(false);
+  const label = (name || '?').trim();
+  const bg = AVATAR_BG[[...label].reduce((a, c) => a + c.charCodeAt(0), 0) % AVATAR_BG.length];
+  if (!src || failed) {
+    return (
+      <div className="w-9 h-9 shrink-0 rounded-full border-2 border-black flex items-center justify-center font-fredoka font-bold text-ink-black" style={{ background: bg }}>
+        {label.charAt(0).toUpperCase()}
+      </div>
+    );
+  }
+  return (
+    <img src={src} alt={label} referrerPolicy="no-referrer" onError={() => setFailed(true)}
+      className="w-9 h-9 shrink-0 rounded-full border-2 border-black bg-white object-cover" />
+  );
+};
+
 const ChatRoom = () => {
   const chatContainerRef = useRef(null);
 
@@ -102,7 +122,7 @@ const ChatRoom = () => {
 
   return (
     <motion.div
-      className="bg-white border-[3px] border-black rounded-[15px] p-0 shadow-[8px_8px_0_black] overflow-hidden flex flex-col h-[500px] mt-10 md:mt-0"
+      className="text-ink-black bg-white border-[3px] border-black rounded-[15px] p-0 shadow-[8px_8px_0_black] overflow-hidden flex flex-col h-[500px] mt-10 md:mt-0"
       whileHover={{ scale: 1.01, boxShadow: "12px 12px 0 black" }}
       whileTap={{ scale: 0.99 }}
       transition={bouncyTransition}
@@ -138,12 +158,7 @@ const ChatRoom = () => {
 
             return (
                 <div key={msg.id} className={`flex gap-2 ${isMe ? "flex-row-reverse" : "flex-row"}`}>
-                    <img 
-                      src={msg.photoURL} 
-                      alt="avatar" 
-                      className="w-9 h-9 rounded-full border-2 border-black bg-white object-cover"
-                      onError={(e) => {e.target.src="https://api.dicebear.com/9.x/avataaars/svg?seed=Guest"}}
-                    />
+                    <Avatar src={isMe && user?.picture ? user.picture : msg.photoURL} name={msg.displayName} />
                     
                     <div className="max-w-[80%]">
                         <p className={`font-bold text-[10px] mb-0.5 opacity-70 ${isMe ? "text-right" : "text-left"}`}>
