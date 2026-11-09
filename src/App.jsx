@@ -4,6 +4,7 @@ import NavBar from './components/sections/Navbar';
 import Scene3D from './components/sections/Scene3d';
 import ChatDock from './components/sections/ChatDock';
 
+// benerin
 const App = () => {
   const GOOGLE_CLIENT_ID = import.meta.env.VITE_GOOGLE_CLIENT_ID || "missing-client-id";
 
