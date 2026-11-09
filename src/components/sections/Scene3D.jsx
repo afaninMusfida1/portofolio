@@ -125,7 +125,7 @@ const Scene3D = () => {
         {/* ID card berdiri sendiri (di luar wrapper bertransform) */}
         <AnimatePresence>
           {ui.step === 0 && (
-            <motion.div key="idcard" className="absolute right-[5vw] top-[100px] md:top-[150px] w-[120px] sm:w-[200px] md:w-[240px] xl:w-[270px] z-20"
+            <motion.div key="idcard" className="absolute right-[5vw] top-[76px] w-[100px] sm:top-[100px] sm:w-[200px] md:top-[150px] md:w-[240px] xl:w-[270px] z-20"
               initial={{ opacity: 0, y: -40 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -80 }} transition={{ duration: 0.35 }}>
               <IdCard />
             </motion.div>
@@ -133,7 +133,7 @@ const Scene3D = () => {
         </AnimatePresence>
 
         {/* Panel konten: isi tiap langkah bergeser ke atas sesuai scroll */}
-        <div ref={panel} className="absolute left-[5vw] right-[5vw] lg:right-auto lg:w-[min(780px,56vw)] top-[44vh] lg:top-24 bottom-16 overflow-hidden font-poppins text-ink-black"
+        <div ref={panel} className="absolute left-[4vw] right-[4vw] lg:left-[5vw] lg:right-auto lg:w-[min(780px,56vw)] top-[40vh] lg:top-24 bottom-16 overflow-hidden rounded-2xl border-2 border-ink-black bg-electric-purple/90 px-2 shadow-[4px_4px_0_#1a1a1a] font-poppins text-ink-black sm:left-[5vw] sm:right-[5vw] sm:rounded-none sm:border-0 sm:bg-transparent sm:px-0 sm:shadow-none"
           style={{ WebkitMaskImage: fade, maskImage: fade }}>
           {VIEWS.map((V, i) => (
             <div key={i} ref={(el) => (conts.current[i] = el)}
@@ -143,7 +143,7 @@ const Scene3D = () => {
           ))}
         </div>
 
-        <div className="absolute left-[5vw] right-[5vw] md:right-[200px] bottom-5 grid grid-cols-6 gap-2 md:gap-4 font-poppins">
+        <div className="absolute left-[5vw] right-[150px] md:right-[200px] bottom-5 grid grid-cols-6 gap-2 md:gap-4 font-poppins">
           {LABELS.map((l, i) => {
             const fill = ui.step > i ? 100 : ui.step === i ? ui.f * 100 : 0;
             return (

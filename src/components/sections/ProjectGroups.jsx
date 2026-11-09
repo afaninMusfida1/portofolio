@@ -4,7 +4,7 @@ import ProjectCard from '../ui/ProjectCard';
 import MiniProjectCard from '../ui/MiniProjectCard';
 
 const SectionTitle = ({ children }) => (
-  <div className="flex items-center gap-4 mb-6 px-4 md:px-0">
+  <div className="flex items-center gap-4 mb-6 px-0 sm:px-4 md:px-0">
     <div className="h-[3px] bg-black flex-1"></div>
     <h3 className="font-fredoka font-bold text-xl uppercase bg-black text-white px-4 py-1 rounded-md -rotate-1">
       {children}
@@ -17,7 +17,7 @@ export const WebGroup = () => (
   <>
     <div className="mb-10">
         <SectionTitle>Web Projects</SectionTitle>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 px-4 md:px-0">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 px-0 sm:px-4 md:px-0">
                 <ProjectCard
                     label="WEB"
                     title="NAPAK"
@@ -94,7 +94,7 @@ export const WebGroup = () => (
     <div className="mb-6">
             <SectionTitle>More Experiments</SectionTitle>
 
-            <div className="grid grid-cols-2 md:grid-cols-3 gap-4 px-4 md:px-0">
+            <div className="grid grid-cols-1 min-[480px]:grid-cols-2 md:grid-cols-3 gap-4 px-0 sm:px-4 md:px-0">
                 <MiniProjectCard
                     title="Expense Tracker"
                     desc="Pencatat pengeluaran."
@@ -139,7 +139,7 @@ export const AppGroup = () => (
   <>
     <div className="mb-10">
             <SectionTitle>Mobile Apps</SectionTitle>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 px-4 md:px-0">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 px-0 sm:px-4 md:px-0">
                 <ProjectCard
                     label="APP"
                     title="KliQ"
@@ -171,7 +171,7 @@ export const ArvrGroup = () => (
   <>
     <div className="mb-10">
             <SectionTitle>AR / VR</SectionTitle>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 px-4 md:px-0">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 px-0 sm:px-4 md:px-0">
                 <ProjectCard
                     label="AR"
                     title="E-Lens"         

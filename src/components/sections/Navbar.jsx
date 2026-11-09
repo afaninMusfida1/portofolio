@@ -43,7 +43,7 @@ const NavBar = () => {
   return (
     <nav className="sticky top-3 z-50 px-3 pt-3">
       <div className="mx-auto max-w-[1000px] flex justify-center">
-        <div className="flex gap-2 overflow-x-auto max-w-full bg-white border-[3px] border-ink-black rounded-[50px] shadow-hard p-2 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
+        <div className="grid w-full max-w-[360px] grid-cols-3 gap-1.5 bg-white border-[3px] border-ink-black rounded-[24px] shadow-hard p-1.5 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden sm:flex sm:w-auto sm:max-w-full sm:gap-2 sm:rounded-[50px] sm:p-2">
           {NAV_ITEMS.map(({ id, label }) => {
             const isActive = active === id;
             return (
@@ -53,7 +53,7 @@ const NavBar = () => {
                 whileHover={{ scale: 1.08, rotate: -2 }}
                 whileTap={{ scale: 0.92 }}
                 transition={bouncyTransition}
-                className={`shrink-0 px-4 py-1.5 rounded-full border-2 border-ink-black font-fredoka font-semibold text-sm md:text-base cursor-pointer transition-colors ${
+                className={`shrink-0 px-2 py-1 rounded-full border-2 border-ink-black font-fredoka font-semibold text-xs sm:px-4 sm:py-1.5 sm:text-sm md:text-base cursor-pointer transition-colors ${
                   isActive
                     ? 'bg-neon-green text-ink-black shadow-[2px_2px_0_#1a1a1a]'
                     : 'bg-white text-ink-black hover:bg-gray-100'
