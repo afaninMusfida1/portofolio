@@ -1,15 +1,93 @@
 <!doctype html>
-<html lang="en">
+<html lang="id">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="assets/hi.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Fanin</title>
+
+    <!-- ===== SEO dasar ===== -->
+    <title>Afanin Musfida | Frontend Developer – Polines</title>
+    <meta name="description" content="Portofolio Afanin Musfida, Frontend & Web Developer, mahasiswa Politeknik Negeri Semarang. Proyek web React, Next.js, Laravel, Web-GIS, dan 3D interaktif." />
+    <meta name="author" content="Afanin Musfida" />
+    <meta name="robots" content="index, follow, max-image-preview:large" />
+    <meta name="theme-color" content="#4c35de" />
+    <link rel="canonical" href="https://www.devlogfanin.web.id/" />
+    <link rel="icon" type="image/png" href="/assets/hi.png" />
+
+    <!-- ===== Open Graph & Twitter (pratinjau saat link dibagikan) ===== -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Afanin Musfida" />
+    <meta property="og:locale" content="id_ID" />
+    <meta property="og:url" content="https://www.devlogfanin.web.id/" />
+    <meta property="og:title" content="Afanin Musfida | Frontend Developer – Polines" />
+    <meta property="og:description" content="Frontend & Web Developer, mahasiswa Politeknik Negeri Semarang. Proyek web React, Next.js, Laravel, Web-GIS, dan 3D interaktif." />
+    <meta property="og:image" content="https://res.cloudinary.com/dfwe8am51/image/upload/v1767967813/Afanin_brbmiq.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Afanin Musfida | Frontend Developer – Polines" />
+    <meta name="twitter:description" content="Frontend & Web Developer, mahasiswa Politeknik Negeri Semarang. Proyek web React, Next.js, Laravel, Web-GIS, dan 3D interaktif." />
+    <meta name="twitter:image" content="https://res.cloudinary.com/dfwe8am51/image/upload/v1767967813/Afanin_brbmiq.png" />
+
+    <!-- ===== Data terstruktur: memberi tahu Google bahwa situs ini milik orang bernama Afanin Musfida ===== -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "WebSite",
+          "@id": "https://www.devlogfanin.web.id/#website",
+          "url": "https://www.devlogfanin.web.id/",
+          "name": "Afanin Musfida",
+          "alternateName": ["Afanin", "Fanin", "Devlog Fanin"],
+          "inLanguage": "id"
+        },
+        {
+          "@type": "Person",
+          "@id": "https://www.devlogfanin.web.id/#person",
+          "name": "Afanin Musfida",
+          "alternateName": ["Afanin", "Fanin"],
+          "url": "https://www.devlogfanin.web.id/",
+          "image": "https://res.cloudinary.com/dfwe8am51/image/upload/v1767967813/Afanin_brbmiq.png",
+          "jobTitle": "Frontend Developer",
+          "description": "Frontend & Web Developer, mahasiswa Politeknik Negeri Semarang, membangun aplikasi web dengan React, Next.js, Tailwind, dan Laravel.",
+          "affiliation": { "@type": "CollegeOrUniversity", "name": "Politeknik Negeri Semarang" },
+          "alumniOf": { "@type": "EducationalOrganization", "name": "SMKN 1 Kandeman" },
+          "worksFor": { "@type": "Organization", "name": "PT Yhoiki Digital Nusantara" },
+          "knowsAbout": ["Frontend Development", "Web Development", "React", "Next.js", "Tailwind CSS", "Laravel", "Web-GIS", "Three.js", "UI/UX Design"],
+          "sameAs": [
+            "https://github.com/AfaninMusfida1",
+            "https://linkedin.com/in/afanin-musfida",
+            "https://instagram.com/afaniwn"
+          ]
+        }
+      ]
+    }
+    </script>
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600;700&family=Patrick+Hand&family=Poppins:wght@400;600;800&display=swap" rel="stylesheet" />
   </head>
   <body>
     <div id="root"></div>
+    <!-- Konten cadangan untuk crawler/pengguna tanpa JavaScript -->
+    <noscript>
+      <main style="font-family:sans-serif;max-width:720px;margin:40px auto;padding:0 20px">
+        <h1>Afanin Musfida – Frontend Developer</h1>
+        <p>Afanin Musfida adalah Frontend &amp; Web Developer, mahasiswa Politeknik Negeri Semarang (Polines). Membangun aplikasi web dengan React, Next.js, Tailwind CSS, dan Laravel, dari platform Web-GIS sampai simulasi 3D interaktif.</p>
+        <h2>Proyek</h2>
+        <ul>
+          <li>NAPAK – platform Web-GIS dan simulasi 3D mitigasi longsor di Semarang</li>
+          <li>Reksa – WebGIS pelaporan banjir dan kerusakan infrastruktur</li>
+          <li>AIPRA – sistem manajemen aset Pramuka</li>
+          <li>KliQ – aplikasi antrean dan administrasi pasien</li>
+          <li>Gluver – aplikasi monitoring gula darah berbasis IoT</li>
+          <li>Tata Surya XR, Anatomi 3D, Ward 13 – simulasi AR/VR di browser</li>
+        </ul>
+        <p>
+          <a href="https://github.com/AfaninMusfida1">GitHub</a> ·
+          <a href="https://linkedin.com/in/afanin-musfida">LinkedIn</a> ·
+          <a href="https://instagram.com/afaniwn">Instagram</a>
+        </p>
+      </main>
+    </noscript>
     <script type="module" src="/src/main.jsx"></script>
   </body>
 </html>

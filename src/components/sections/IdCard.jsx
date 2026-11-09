@@ -32,7 +32,7 @@ const IdCard = () => (
       <div className="w-full aspect-[3/4] bg-neon-green rounded-[12px] overflow-hidden mb-[15px] border-[3px] border-ink-black relative group mt-4">
         <img
           src="https://res.cloudinary.com/dfwe8am51/image/upload/v1767967813/Afanin_brbmiq.png"
-          alt="Profile"
+          alt="Foto Afanin Musfida, Frontend Developer"
           draggable={false}
           className="w-full h-full object-cover grayscale sepia-[0.2] transition-all duration-500 group-hover:grayscale-0 group-hover:sepia-0 group-hover:scale-110 group-hover:rotate-2"
         />
