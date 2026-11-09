@@ -125,7 +125,7 @@ const Scene3D = () => {
         {/* ID card berdiri sendiri (di luar wrapper bertransform) */}
         <AnimatePresence>
           {ui.step === 0 && (
-            <motion.div key="idcard" className="absolute right-[5vw] top-[76px] w-[100px] sm:top-[100px] sm:w-[200px] md:top-[150px] md:w-[240px] xl:w-[270px] z-20"
+            <motion.div key="idcard" className="absolute right-[5vw] top-[150px] hidden w-[240px] md:block xl:w-[270px] z-20"
               initial={{ opacity: 0, y: -40 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -80 }} transition={{ duration: 0.35 }}>
               <IdCard />
             </motion.div>
@@ -133,7 +133,7 @@ const Scene3D = () => {
         </AnimatePresence>
 
         {/* Panel konten: isi tiap langkah bergeser ke atas sesuai scroll */}
-        <div ref={panel} className="absolute left-[4vw] right-[4vw] lg:left-[5vw] lg:right-auto lg:w-[min(780px,56vw)] top-[40vh] lg:top-24 bottom-16 overflow-hidden rounded-2xl border-2 border-ink-black bg-electric-purple/90 px-2 shadow-[4px_4px_0_#1a1a1a] font-poppins text-ink-black sm:left-[5vw] sm:right-[5vw] sm:rounded-none sm:border-0 sm:bg-transparent sm:px-0 sm:shadow-none"
+        <div ref={panel} className="absolute left-[4vw] right-[4vw] top-[28vh] bottom-16 overflow-hidden rounded-2xl border-2 border-ink-black bg-electric-purple/90 px-2 shadow-[4px_4px_0_#1a1a1a] font-poppins text-ink-black md:left-[5vw] md:right-[5vw] md:top-[40vh] md:rounded-none md:border-0 md:bg-transparent md:px-0 md:shadow-none lg:right-auto lg:top-24 lg:w-[min(780px,56vw)]"
           style={{ WebkitMaskImage: fade, maskImage: fade }}>
           {VIEWS.map((V, i) => (
             <div key={i} ref={(el) => (conts.current[i] = el)}
