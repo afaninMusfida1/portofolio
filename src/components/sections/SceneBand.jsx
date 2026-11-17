@@ -18,7 +18,7 @@ const SceneBand = ({ id, tag, h1, h2, p }) => (
         {h1}<br /><span className="text-neon-green">{h2}</span>
       </h2>
       <p className="font-patrick text-white text-xl md:text-2xl mt-3 leading-snug">{p}</p>
-      <p className="font-patrick text-white/80 text-lg mt-6">Scroll ↓</p>
+      <p className="font-patrick text-white/80 text-lg mt-6">Gulir ↓</p>
     </motion.div>
   </div>
 );

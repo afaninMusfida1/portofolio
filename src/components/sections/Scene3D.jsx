@@ -28,7 +28,7 @@ const HeroView = () => (
       Halo, saya <span className="text-neon-green">Afanin.</span>
     </h1>
     <p className="font-patrick text-white text-xl md:text-2xl mt-3 leading-snug">
-      Bukan sekadar tukang ketik kode, tapi <b>Frontend Wizard</b> yang <i>lowkey obsessed</i> sama <i>smooth animation</i> dan <i>clean architecture</i>.
+      Bukan sekadar menulis kode. Saya <b>Frontend Developer</b> yang menyukai <i>animasi yang halus</i> dan <i>arsitektur kode yang rapi</i>.
     </p>
     <div className="mt-5 flex flex-wrap gap-3">
       <motion.a href="#web" className="inline-block bg-ink-black text-neon-green px-7 py-3 font-fredoka text-xl -rotate-2 border-2 border-white rounded-[10px] no-underline"
@@ -45,7 +45,7 @@ const VIEWS = [
   () => (<><Head tag="MOBILE" h1="Aplikasi Mobile," h2="Antrean sampai IoT." p="Dari rancangan UI/UX sampai perangkat ESP32." /><AppGroup /></>),
   () => (<><Head tag="AR / VR" h1="Dunia 3D di Browser," h2="AR dan VR." p="Simulasi interaktif yang bisa dijelajahi dengan WASD, mouse, atau headset." /><ArvrGroup /></>),
   () => (<><Head tag="RESUME" h1="Belajar di Polines," h2="Memimpin di Yhoiki." /><ResumeClipboard /></>),
-  () => (<><Head tag="CONTACT" h1="Ada Proyek?" h2="Ayo Kerja Bareng." p="Info project lucu dungs. Japri is the key!!!" /><ContactFooter /></>),
+  () => (<><Head tag="CONTACT" h1="Ada Proyek?" h2="Ayo Kerja Bareng." p="Punya proyek seru? Hubungi saya langsung." /><ContactFooter /></>),
 ];
 
 /* ================= Panggung: satu layar, isi berganti & bergeser saat scroll ================= */

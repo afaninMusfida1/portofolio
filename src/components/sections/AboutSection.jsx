@@ -52,7 +52,7 @@ const AboutSection = () => {
 
         <div className="group ">
             <div className="font-patrick bg-black text-neon-green inline-block px-[15px] py-[5px] rounded-[20px] mb-[10px] -rotate-2">
-                It's me! 👋
+                Ini saya! 👋
             </div>
             
             <h1 className="font-fredoka text-[3.5rem] text-ink-black mb-[15px] leading-none shadow-neon-green transition-all duration-300 group-hover:-skew-x-[5deg] group-hover:[text-shadow:5px_5px_0px_#4c35de]">
@@ -60,7 +60,7 @@ const AboutSection = () => {
             </h1>
             
             <p className="font-patrick text-[1.4rem] font-medium text-ink-black">
-                Bukan sekadar tukang ketik kode, tapi <b>Frontend Wizard</b> yang <i>lowkey obsessed</i> sama <i>smooth animation</i> dan <i>clean architecture</i>. Hidup di antara tumpukan `div` dan <i>state management</i>. 😆🖐️
+                Bukan sekadar menulis kode. Saya <b>Frontend Developer</b> yang menyukai <i>animasi yang halus</i> dan <i>arsitektur kode yang rapi</i>. Hari-hari saya dihabiskan di antara tumpukan <code>div</code> dan <i>state management</i>. 😆🖐️
             </p>
 
             <motion.a 

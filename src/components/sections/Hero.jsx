@@ -21,7 +21,7 @@ const Hero = () => (
       </h1>
 
       <p className="font-patrick text-white text-xl md:text-2xl mt-4 leading-snug">
-        Bukan sekadar tukang ketik kode, tapi <b>Frontend Wizard</b> yang <i>lowkey obsessed</i> sama <i>smooth animation</i> dan <i>clean architecture</i>.
+        Bukan sekadar menulis kode. Saya <b>Frontend Developer</b> yang menyukai <i>animasi yang halus</i> dan <i>arsitektur kode yang rapi</i>.
       </p>
 
       <div className="mt-6 flex flex-wrap gap-3">

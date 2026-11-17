@@ -149,7 +149,7 @@ const ChatRoom = () => {
             <div className="h-full flex flex-col items-center justify-center text-gray-400 opacity-50">
                 <span className="text-4xl mb-2">🔥</span>
                 <p className="font-fredoka text-lg">Chatroom!</p>
-                <p className="text-sm">Jadilah yang pertama chat disini.</p>
+                <p className="text-sm">Jadilah yang pertama mengirim pesan di sini.</p>
             </div>
         )}
 

@@ -59,15 +59,15 @@ const ContactFooter = () => {
           <div className="flex flex-col justify-between">
             <div>
                 <h2 className="font-fredoka font-black text-4xl md:text-5xl text-black leading-tight mb-4">
-                  LETS WORK <br/> TOGETHER!
+                  MARI BEKERJA <br/> SAMA!
                 </h2>
                 <p className="font-patrick text-xl text-black/80 mb-8">
-                  Info project lucu dungs. Japri is the key!!! 
+                  Punya proyek seru? Hubungi saya langsung.
                 </p>
             </div>
             <div>
                 <p className="font-fredoka font-bold mb-3 text-sm uppercase tracking-wide opacity-80 flex items-center gap-2">
-                    Let's Mutual! 
+                    Terhubung dengan saya
                 </p>
                 <div className="grid grid-cols-2 gap-3">
                     {socials.map((item) => (
@@ -91,7 +91,7 @@ const ContactFooter = () => {
           {/* Kolom Kanan (Form) */}
           <div className="bg-white border-[3px] border-black rounded-[15px] p-6 shadow-[8px_8px_0_rgba(0,0,0,0.1)] relative">
             <h3 className="font-fredoka font-bold text-2xl mb-4 border-b-2 border-dashed border-black pb-2">
-                Kirim Pesan Rahasia ke Gue!
+                Kirim Pesan ke Saya
             </h3>
 
             <AnimatePresence mode='wait'>
@@ -107,7 +107,7 @@ const ContactFooter = () => {
                             <CheckCircle2 size={40} />
                         </div>
                         <h4 className="font-fredoka text-2xl font-bold">Terkirim!</h4>
-                        <p className="font-patrick text-lg">Pesan lo udah masuk Telegram gue.</p>
+                        <p className="font-patrick text-lg">Pesan kamu sudah saya terima.</p>
                     </motion.div>
                 ) : (
                     <motion.form 
@@ -122,14 +122,14 @@ const ContactFooter = () => {
                         <input type="text" name="website" value={formData.website} onChange={handleChange} tabIndex={-1} autoComplete="off" aria-hidden="true" className="absolute left-[-9999px] h-0 w-0 opacity-0" />
                         {/* Input Nama */}
                         <div>
-                            <label className="font-fredoka text-sm font-bold mb-1 block ml-1">Nama Lo</label>
+                            <label className="font-fredoka text-sm font-bold mb-1 block ml-1">Nama</label>
                             <input 
                                 type="text" 
                                 name="name"
                                 required
                                 value={formData.name}
                                 onChange={handleChange}
-                                placeholder="Siapa nih?"
+                                placeholder="Nama kamu"
                                 className="w-full bg-gray-50 border-[2px] border-black rounded-[10px] px-4 py-3 font-patrick focus:outline-none focus:bg-white focus:shadow-[4px_4px_0_#000] transition-all"
                             />
                         </div>
@@ -143,7 +143,7 @@ const ContactFooter = () => {
                                 required
                                 value={formData.email}
                                 onChange={handleChange}
-                                placeholder="email@keren.com"
+                                placeholder="email@contoh.com"
                                 className="w-full bg-gray-50 border-[2px] border-black rounded-[10px] px-4 py-3 font-patrick focus:outline-none focus:bg-white focus:shadow-[4px_4px_0_#000] transition-all"
                             />
                         </div>
@@ -157,7 +157,7 @@ const ContactFooter = () => {
                                 required
                                 value={formData.message}
                                 onChange={handleChange}
-                                placeholder="Mau ngajak collab project..."
+                                placeholder="Ceritakan kolaborasi atau proyek yang ingin dibahas..."
                                 className="w-full bg-gray-50 border-[2px] border-black rounded-[10px] px-4 py-3 font-patrick focus:outline-none focus:bg-white focus:shadow-[4px_4px_0_#000] transition-all resize-none"
                             ></textarea>
                         </div>
@@ -178,7 +178,7 @@ const ContactFooter = () => {
                         </motion.button>
                         
                         {status === 'error' && (
-                            <p className="text-red-500 font-bold text-center text-sm font-patrick">Yah, gagal kirim. Coba lagi bentar ya.</p>
+                            <p className="text-red-500 font-bold text-center text-sm font-patrick">Pesan gagal terkirim. Silakan coba lagi beberapa saat lagi.</p>
                         )}
                     </motion.form>
                 )}

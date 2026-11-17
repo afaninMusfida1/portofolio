@@ -16,7 +16,7 @@ const SectionTitle = ({ children }) => (
 export const WebGroup = () => (
   <>
     <div className="mb-10">
-        <SectionTitle>Web Projects</SectionTitle>
+        <SectionTitle>Proyek Web</SectionTitle>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 px-0 sm:px-4 md:px-0">
                 <ProjectCard
                     label="WEB"
@@ -41,7 +41,7 @@ export const WebGroup = () => (
                 <ProjectCard
                     label="WEB"
                     title="Gugah"
-                    desc="Platform edukasi. Fitur chat real-time, artikel, game, dan lokasi aman terdekat."
+                    desc="Platform edukasi dengan chat real-time, artikel, game, dan penunjuk lokasi aman terdekat."
                     tags={["react", "Tailwind"]}
                     color="bg-[#ff99cc]"
                     rotation="rotate-1"
@@ -61,7 +61,7 @@ export const WebGroup = () => (
                 <ProjectCard
                     label="WEB"
                     title="AIPRA"
-                    desc="Sistem manajemen aset untuk Pramuka. Fitur pendataan barang, pencatatan peminjaman, dan pelaporan stok otomatis."
+                    desc="Sistem manajemen aset untuk Pramuka, mencakup pendataan barang, pencatatan peminjaman, dan laporan stok otomatis."
                     tags={["PHP", "laravel", "MySQL", "Filament"]}
                     color="bg-[#33cc33] text-white"
                     rotation="-rotate-1"
@@ -81,7 +81,7 @@ export const WebGroup = () => (
                 <ProjectCard
                     label="WEB"
                     title="Seattle"
-                    desc="Web App presensi siswa Seattle."
+                    desc="Aplikasi web presensi siswa Seattle."
                     tags={["React", "Tailwind"]}
                     color="bg-teal-300"
                     repoLink="https://github.com/afaninMusfida1/Seattle"
@@ -92,12 +92,12 @@ export const WebGroup = () => (
 
         
     <div className="mb-6">
-            <SectionTitle>More Experiments</SectionTitle>
+            <SectionTitle>Eksperimen Lainnya</SectionTitle>
 
             <div className="grid grid-cols-1 min-[480px]:grid-cols-2 md:grid-cols-3 gap-4 px-0 sm:px-4 md:px-0">
                 <MiniProjectCard
                     title="Expense Tracker"
-                    desc="Pencatat pengeluaran."
+                    desc="Aplikasi pencatat pengeluaran."
                     lang="HTML/JS"
                     color="bg-green-300"
                     repoLink="https://github.com/afaninMusfida1/Expense-Tracker"
@@ -105,7 +105,7 @@ export const WebGroup = () => (
                 />
                 <MiniProjectCard
                     title="Photostrip"
-                    desc="Web kreasi layout foto."
+                    desc="Web untuk membuat susunan foto ala photostrip."
                     lang="HTML/JS"
                     color="bg-pink-300"
                     repoLink="https://github.com/afaninMusfida1/Photostrip"
@@ -113,7 +113,7 @@ export const WebGroup = () => (
                 />
                 <MiniProjectCard
                     title="Konversi Bilangan"
-                    desc="Tools konversi angka."
+                    desc="Alat konversi bilangan."
                     lang="HTML/JS"
                     color="bg-red-300"
                     repoLink="https://github.com/afaninMusfida1/convert-bilangan"
@@ -126,8 +126,8 @@ export const WebGroup = () => (
                     whileHover={{ scale: 0.98 }}
                     whileTap={{ scale: 0.95 }}
                 >
-                    <span className="font-fredoka font-bold text-lg">View All Repos</span>
-                    <span className="text-sm">on GitHub →</span>
+                    <span className="font-fredoka font-bold text-lg">Lihat Semua Repositori</span>
+                    <span className="text-sm">di GitHub →</span>
                 </motion.a>
             </div>
         </div>
@@ -138,7 +138,7 @@ export const WebGroup = () => (
 export const AppGroup = () => (
   <>
     <div className="mb-10">
-            <SectionTitle>Mobile Apps</SectionTitle>
+            <SectionTitle>Aplikasi Mobile</SectionTitle>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 px-0 sm:px-4 md:px-0">
                 <ProjectCard
                     label="APP"
@@ -176,7 +176,7 @@ export const ArvrGroup = () => (
                     label="AR"
                     title="E-Lens"         
                     image="/assets/projects/elens.png"
-                    desc="Pengenalan budaya rumah adat lewat AR. Scan card bergambar orang berpakaian adat, lalu rumah adatnya muncul."
+                    desc="Pengenalan budaya rumah adat lewat AR. Pindai kartu bergambar orang berpakaian adat, lalu rumah adatnya muncul di layar."
                     tags={["AR", "Edukasi Budaya"]}
                     color="bg-amber-300"
                     rotation="rotate-1"
@@ -187,7 +187,7 @@ export const ArvrGroup = () => (
                     label="VR"
                     title="Ward 13"         
                     image="/assets/projects/ward13.png"
-                    desc="Horror walking simulator 3D di browser dengan movement engine custom, tekstur prosedural, dan sound Web Audio API."
+                    desc="Simulator jalan 3D bertema horor di browser, dengan mesin pergerakan buatan sendiri, tekstur prosedural, dan audio dari Web Audio API."
                     tags={["A-Frame", "Web Audio API"]}
                     color="bg-red-400 text-white"
                     rotation="-rotate-1"
@@ -198,7 +198,7 @@ export const ArvrGroup = () => (
                     label="VR"
                     title="Simulasi NAPAK"                    
                     image="/assets/projects/napak.png"
-                    desc="Simulasi 3D interaktif longsor pada NAPAK, dengan kontrol WASD dan kontrol VR untuk mobile."
+                    desc="Simulasi 3D longsor yang interaktif pada NAPAK, dengan kontrol WASD dan kontrol VR untuk perangkat mobile."
                     tags={["Three.js", "React Three Fiber"]}
                     color="bg-orange-300"
                     rotation="rotate-1"
@@ -209,7 +209,7 @@ export const ArvrGroup = () => (
                     label="AR/VR"
                     title="Tata Surya XR"
                     image="/assets/projects/tatasurya.png"
-                    desc="Simulasi tata surya 3D interaktif. Klik planet untuk info, jelajahi dengan WASD + mouse, atau masuk lewat mode VR/AR."
+                    desc="Simulasi tata surya 3D interaktif. Klik planet untuk melihat infonya, jelajahi dengan WASD dan mouse, atau masuk lewat mode VR/AR."
                     tags={["WebXR", "3D", "Edukasi"]}
                     color="bg-indigo-300"
                     rotation="-rotate-1"
@@ -217,10 +217,10 @@ export const ArvrGroup = () => (
                     demoLink="https://tatasurya-xi.vercel.app/"
                 />
                 <ProjectCard
-                    label="AR.VR"
+                    label="AR/VR"
                     title="Anatomi 3D Interaktif"
                     image="/assets/projects/anatomi.png"
-                    desc="Model anatomi tubuh manusia 3D dengan label organ, isolasi organ, putar otomatis, dan zoom. Model: HuBMAP (CC BY 4.0)."
+                    desc="Model 3D anatomi tubuh manusia dengan label organ, mode isolasi organ, putar otomatis, dan zoom. Model: HuBMAP (CC BY 4.0)."
                     tags={["3D", "Edukasi", "Interaktif"]}
                     color="bg-rose-300"
                     rotation="rotate-1"
