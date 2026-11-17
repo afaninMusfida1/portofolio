@@ -107,7 +107,7 @@ const ContactFooter = () => {
                             <CheckCircle2 size={40} />
                         </div>
                         <h4 className="font-fredoka text-2xl font-bold">Terkirim!</h4>
-                        <p className="font-patrick text-lg">Pesan lo udah masuk database gue.</p>
+                        <p className="font-patrick text-lg">Pesan lo udah masuk Telegram gue.</p>
                     </motion.div>
                 ) : (
                     <motion.form 
